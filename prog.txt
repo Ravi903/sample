@@ -86,3 +86,22 @@ return new ResponseEntity<>(_user,HttpStatus.CREATED);
 }
 }
 
+[15:26] Sachin Shivarudrappa
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+<dependency>
+<groupId>io.springfox</groupId>
+<artifactId>springfox-swagger2</artifactId>
+<version>3.0.0</version>
+</dependency>
+
+
+[15:27] Sachin Shivarudrappa
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+<dependency>
+<groupId>io.springfox</groupId>
+<artifactId>springfox-swagger-ui</artifactId>
+<version>3.0.0</version>
+</dependency>
+
+
+
