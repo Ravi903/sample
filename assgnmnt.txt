@@ -1,0 +1,23 @@
+Assignment Answers
+
+1) D - 304
+
+2) A - Accept
+
+3) A - Create
+
+4) C - Both manual and automation API testing 
+
+5) D - All of the above 
+
+6) B - Project > Test Suite > Test Case > Test Step 
+
+7) A - View results tree
+
+8) C - 404
+
+9) B - Availability test
+
+10) C - Regular expression tester
+
+11) D - Non functional testing
