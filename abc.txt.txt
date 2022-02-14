@@ -1,1 +1,48 @@
 learning to push
+
+   37  gedit lpod2.yaml
+   38  cp lpod1.yaml lpod3.yaml
+   39  gedit lpod2.yaml
+   40  gedit lpod3.yaml
+   41  gedit lpod2.yaml
+   42  kubectl apply -f lpod1.yaml
+   43  minikube start
+   44  kubectl apply -f lpod1.yaml
+   45  gedit lpod1.yaml
+   46  kubectl apply -f lpod1.yaml
+   47  gedit lpod2.yaml
+   48  kubectl apply -f lpod2.yaml
+   49  gedit lpod3.yaml
+   50  kubectl apply -f lpod3.yaml
+   51  kubectl get pods --show-labels
+   52  kubectl get pods -l env!=stage
+   53  kubectl get pods -l env=stage
+   54  kubectl get pods -l 'env in (stage,prod)'
+   55  gedit myrc.yaml
+   56  kubectl apply -f myrc.yaml
+   57  kubectl get pod
+   58  gedit rs.yaml
+   59  kubectl apply -f rs.yaml
+   60  gedit rs.yaml
+   61  kubectl apply -f rs.yaml
+   62  gedit rs.yaml
+   63  kubectl apply -f rs.yaml
+   64  kubectl get rs
+   65  kubectl get rc
+   66  kubectl describe rs myrset
+   67  cp rs.yaml deply.yaml
+   68  gedit deply.yaml
+   69  kubectl apply -f deply.yaml
+   70  gedit deply.yaml
+   71  kubectl apply -f deply.yaml
+   72  kubectl get deployment my-deploy
+   73  gedit deply.yaml
+   74  kubectl get deployment mydeploy
+   75  kubectl set image deployment rsnginx=nginx:1.7.9 --all=true
+   76  gedit deply.yaml
+   77  kubectl set image deployment de-nginx=nginx:1.7.9 --all=true
+   78  kubectl get pods
+   79  kubectl exec -it mydeploy-8c5547fd8-7pwgv -- /bin/bash
+   80  kubectl get pods
+   81  kubectl rollout
+   82  history
