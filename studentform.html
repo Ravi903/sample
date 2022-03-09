@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">        
+    </head>
+    
+    <script>
+        
+        function add(){
+        var mysql = require('mysql');
+
+        var con = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "ravikumar",
+        database: "stu_details"
+        });
+
+        con.connect(function(err) {
+        if (err) throw err;
+        console.log("connected");
+        });
+
+            var name=document.getElementByID("name").value;
+            var num=document.getElementByID("number").value;
+            var exp=document.getElementByID("email").value;
+            var cvv=document.getElementByID("phno").value;
+
+         var sql = "INSERT INTO student_details (Student_Name, Student_USN_Number, Student_Email_ID, Student_Phone_Number) VALUES ('"+Student_Name+ "', '"+Student_USN_Number+"','"+Student_Email_ID+"','"+Student_Phone_Number+"')";
+        con.query(sql, function (err, result) {
+            if (err) {
+                throw err;
+
+            }
+
+        console.log(result.affectedRows + " record(s) updated");
+        });
+        }
+            
+        
+    </script>
+    <body>
+        <div class="d1">
+        <h1 class="double">Student Details</h1>
+
+
+        <label class="name" for="name">Student Name : </label><br/> 
+        <input type="text" name="name" id="name" placeholder="Enter Name"><br/><br/>
+        <label class="name" for="name">Student USN Number : </label><br/>
+        <input type="number" id="number" name="number" placeholder="Enter USN Number"><br/><br/>
+        <label class="name" for="name">Student Email ID : </label><br/>
+        <input type="text" name="email" id="email" placeholder="Enter Email"><br/><br/>
+        <label class="name" for="name">Student Phone Number : </label><br/>
+        <input type="number" id="phno" name="phno" placeholder="Enter Phone Number"><br/><br/>
+        <input type="submit" value="Submit" onclick="add()" style="background-color: rgb(84, 170, 240);">
+   
+    </div>
+</body>
+</html>
