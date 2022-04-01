@@ -1,0 +1,26 @@
+
+version: "3"
+services:
+  server:
+    image: utkarshgedam99/thbs_general_stores
+    ports:
+      - "8888:8080"
+    environment:
+      - spring.datasource.url=jdbc:mysql://mysqldb:3306/general_stores?useSSL=false
+    networks:
+      - springmysql-net
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: utkarshgedam99/thbs_general_store_mysql
+    networks:
+      - springmysql-net
+    environment:
+      - MYSQL_ROOT_PASSWORD=utkarsh@9
+      - MYSQL_DATABASE=general_stores
+      - MYSQL_USER=sa
+      - MYSQL_PASSWORD=utkarsh@9
+
+networks:
+  springmysql-net:
